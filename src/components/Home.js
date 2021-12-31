@@ -12,7 +12,7 @@ const Home = (props) => {
         <div > 
 
             <Navbar 
-            test ="yo"
+            test ="salut"
             likelen={props.likelen}
             panierlen={props.panierlen}
              />

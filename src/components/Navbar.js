@@ -8,7 +8,7 @@ const Navbar = (props) => {
     // console.log(props)
     const [toggle, setToggle] = useState(false)
     const seePanier = () => { 
-        alert('hello')
+        alert('sauvegarde maillot favoris')
     }
     return (
         <>

@@ -63,7 +63,7 @@ const Panier = (props) => {
                 {props.articles.map(el=>{
                     return(
                         <li className = "listePanier" >
-                            <span> <img className ="imgPanier" src={el.liens} alt="" /></span>
+                            <span> <img className ="imgPanier" src={el.liens} alt="panier" /></span>
                            <span>Nom articles :  {el.nom} </span>
                            <span> Prix : {el.prix} euros</span>
                            <span>

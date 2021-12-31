@@ -16,7 +16,7 @@ const Like = (props) => {
                 {props.articles.map(el=>{
                     return(
                         <li className = "listePanier" >
-                            <span> <img className ="imgPanier" src={el.liens} alt="" /></span>
+                            <span> <img className ="imgPanier" src={el.liens} alt="panier" /></span>
                            <span>Nom articles :  {el.nom} </span>
                            <span> Prix : {el.prix}</span>
                            <span> <button value = {el.id} onClick = {supprime} className='btn btn-danger p-3'>Rendre</button></span>

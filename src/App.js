@@ -59,7 +59,7 @@ function App() {
     { id: uuidv4(), liens: article3, statut: "", ancienPrix: "", toggle: null, nom: "maillot england", prix: 185 },
     { id: uuidv4(), liens: article4, statut: "", ancienPrix: "", toggle: null, nom: "maillot miami", prix: 115 },
     { id: uuidv4(), liens: article5, statut: "Sale", ancienPrix: 170, toggle: false, nom: "maillot argentine", prix: 145 },
-    { id: uuidv4(), liens: article6, statut: "New", ancienPrix: "", toggle: true, nom: "Smaillot senegal", prix: 90 },
+    { id: uuidv4(), liens: article6, statut: "New", ancienPrix: "", toggle: true, nom: "maillot senegal", prix: 90 },
     { id: uuidv4(), liens: article7, statut: "New", ancienPrix: "", toggle: true, nom: "maillot angleterre", prix: 160 },
     { id: uuidv4(), liens: article8, statut: "", ancienPrix: "", toggle: null, nom: "maillot belgique", prix: 145 },
     { id: uuidv4(), liens: article9, statut: "", ancienPrix: "", toggle: null, nom: "maillot madrid", prix: 170 },
