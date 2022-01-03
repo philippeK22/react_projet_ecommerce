@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import aboutImg from '../assets/images/about.jpg'
 
 const Like = (props) => {
     // console.log(props.click)
@@ -11,7 +12,12 @@ const Like = (props) => {
     return (
         <div>
             <Navbar />
-            <h1 className='text-center'> Vos coup de coeur !  </h1>
+            <div>
+                <img className='about-img w-100'  src={aboutImg} alt="about" />
+               <h1 className='text-like'>Coup de coeur</h1> 
+            </div>
+
+           
             <ul className="panierUl">
                 {props.articles.map(el=>{
                     return(

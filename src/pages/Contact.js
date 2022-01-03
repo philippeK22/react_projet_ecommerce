@@ -13,7 +13,7 @@ const Contact = () => {
     return (
         <div>
             <Navbar />
-            <div className="banniere">
+            <div>
                 <img className='about-img w-100'  src={aboutImg} alt="about" />
                <h1 className='text-contact'>contact</h1> 
             </div>

@@ -301,6 +301,7 @@ position: absolute;
   color: white;
   right: 50%;
   text-transform: capitalize;
+  font-weight: bolder;
   
   }  
 
@@ -310,6 +311,7 @@ position: absolute;
     color: white;
     right: 50%;
     text-transform: capitalize;
+    font-weight: bolder;
 
  }  
 
@@ -319,8 +321,28 @@ position: absolute;
     color: white;
     right: 50%;
     text-transform: capitalize;
+    font-weight: bolder;
+    
 
  }  
+
+.text-panier{
+  position: absolute;
+  top: 20%;
+  color: white;
+  right: 50%;
+  text-transform: capitalize;
+  font-weight: bolder;
+} 
+
+.text-like{
+  position: absolute;
+  top: 12%;
+  color: white;
+  right: 50%;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
 
  .carousel-item :active {
   position: absolute;

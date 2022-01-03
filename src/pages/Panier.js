@@ -6,6 +6,7 @@ import Articles from '../components/Articles';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 // import SetTableau from '../component/SetTableau';
+import aboutImg from '../assets/images/about.jpg'
 
 const Panier = (props) => {
     const [quantite, setQuantite] = useState(1)
@@ -59,6 +60,10 @@ const Panier = (props) => {
     return (
         <div>
             <Navbar />
+            <div>
+                <img className='about-img w-100'  src={aboutImg} alt="about" />
+               <h1 className='text-panier'>Panier</h1> 
+            </div>
             <ul className="panierUl">
                 {props.articles.map(el=>{
                     return(
@@ -67,7 +72,7 @@ const Panier = (props) => {
                            <span>Nom articles :  {el.nom} </span>
                            <span> Prix : {el.prix} euros</span>
                            <span>
-                               Quantité :{el.quantite}<span>  </span>
+                               Quantité :{el.quantite}<span></span>
                                <span >
                                 <button value = {el.id} onClick={add} className="operation">+ </button>
                                <button value = {el.id} onClick={sous} className="operation"> -</button>    
