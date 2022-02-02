@@ -83,7 +83,7 @@ const Cards = (props) => {
             <div className=" row main">
 
 
-                <div className=" parent col-xs-12 col-lg-3" style={{ backgroundImage: `url(${spurs})` }}>                         <p>Comming Soon </p>
+                <div className=" parent col-xs-12 col-lg-3" style={{ backgroundImage: `url(${spurs})` }}>  <p>Comming Soon </p>
                 </div>
                 <div className="parent col-xs-12 col-lg-3" style={{ backgroundImage: `url(${belgium})`, backgroundSize: "100%", backgroundRepeat: "no-repeat" }}>
                     <p>Comming Soon </p>
@@ -98,7 +98,7 @@ const Cards = (props) => {
             <h1 className='text-center mb-3'> Our Product</h1>
             <nav class="nav nav-pills nav-justified justify-content-center ">
                 <a onClick={e=>{bestSeller(e)}} className="nav-link " aria-current="page" href="#">BestSeller</a>
-                <a onClick={e=>{nouveau(e)}}    className="nav-link" href="#">New</a>
+                <a onClick={e=>{nouveau(e)}} className="nav-link" href="#">New</a>
                 <a onClick={e=>{sale(e)}}   className="nav-link" href="#">Sale</a>
                 <a onClick={e=>{old(e)}}    className="nav-link" href="#">Old</a>
             </nav>

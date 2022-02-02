@@ -36,7 +36,7 @@ const Navbar = (props) => {
                 <div>
                  <ul>
                     <li>
-                    <NavLink className="navlink" exact to="/panier" style ={{backgroundColor: props.panierlen>0? "orange" : "white" , padding: "20px",color : props.panierlen>0? "white" : "black",  }} >  <i style={{animation : props.panierlen>0 ? "bounce 0.7s ease infinite" :"rien"}}id='bag' class="fas fa-shopping-bag"></i>
+                    <NavLink className="navlink" exact to="/panier" style ={{backgroundColor: props.panierlen>0? "blue" : "white" , padding: "20px",color : props.panierlen>0? "white" : "black",  }} >  <i style={{animation : props.panierlen>0 ? "bounce 0.7s ease infinite" :"rien"}}id='bag' class="fas fa-shopping-bag"></i>
                          <span>{props.panierlen}</span> 
                     </NavLink>
                         </li>
