@@ -12,7 +12,7 @@ import ballon from "../assets/images/ballon.png"
 import lens from "../assets/images/lens.jpg"
 import { v4 as uuidv4 } from 'uuid';
 import { NavLink } from 'react-router-dom';
-// import Footer from "./Footer"
+import Footer from "./Footer"
 
 
 

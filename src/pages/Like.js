@@ -6,7 +6,7 @@ import aboutImg from '../assets/images/about.jpg'
 const Like = (props) => {
     // console.log(props.click)
     const supprime = id => { 
-        props.click(id)
+        props.clickLike(id)
            
     }
     return (

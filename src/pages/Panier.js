@@ -61,8 +61,8 @@ function Panier(props) {
                 el.quantite -= 1;
                 el.prix = el.prixNew * el.quantite;
                 prixTot -= el.prixNew;
-                console.log(el.quantite);
-                console.log(el.prix * el.quantite);
+                // console.log(el.quantite);
+                // console.log(el.prix * el.quantite);
 
             }
         });

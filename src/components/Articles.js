@@ -5,8 +5,8 @@ import { useState, useEffect, useRef } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Panier from '../pages/Panier';
 import aboutImg from '../assets/images/about.jpg'
-import Footer from './Footer';
 import { NavLink } from 'react-router-dom';
+
 // import article1 from "./assets/images/PRODUCT/etoo.jpg"
 // import article2 from "./assets/images/PRODUCT/mbappe.jpg"
 // import article3 from "./assets/images/PRODUCT/sancho.jpg"
@@ -50,7 +50,22 @@ function Articles(props) {
         props.zoom(id)
     }
 
+    const afrique= id =>{
+        props.afrique(id)
+    }
+    const ameriqueSud = e =>{
+        props.ameriqueSud(e)
+    }
 
+    const ameriqueNord=e=>{
+        props.ameriqueNord(e)
+    }
+
+    const Europe =e=>{
+        props.Europe(e)
+    }
+
+    
 
 
 
@@ -59,15 +74,19 @@ function Articles(props) {
             <div className="">
                 <img className='about-img w-100' src={aboutImg} alt="" />
                 <h1 className='text-product'>{title}</h1>
+                <span className="text-light">New Arrival Women Collection</span>
             </div>
             <div className='d-flex justify-content-between'>
                 <h3 className='m-2'>Categories</h3>
                 <h4>Nombre de productcs search: {props.articles.length} all</h4>
             </div>
+            <div className='d-flex justify-content-between'>
+                <h4>Nombre de productcs soldé: {props.solde} all</h4>
+            </div>
             <div className="grandeDiv container ">
                 <div className="listeProduct">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="/">Afrique</a></li>
+                        <li class="list-group-item"><a className='nav-link' onClick={e=>{afrique(e)}} href="/">Afrique</a></li>
                         <li class="list-group-item"><a href="/">Amerique-sud</a></li>
                         <li class="list-group-item"><a href="/">AMerique-nord</a></li>
                         <li class="list-group-item"><a href="/">Europe</a></li>
@@ -95,7 +114,7 @@ function Articles(props) {
                                         {el.statut}
                                     </span>
                                     <NavLink className="navlink" exact to="/zoom"  >
-                                        <button className ="btn_info" onClick={imgEnvoie} value={el.id}>Avoir plus d'infos</button>
+                                        <button className ="btn btn-success px-5" onClick={imgEnvoie} value={el.id}>Avoir plus d'infos</button>
                                          </NavLink>
 
                                     <button onClick={addCard} value={el.id} className='achatbtn btn btn-primary m-1'>Add to Cart</button>

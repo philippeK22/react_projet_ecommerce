@@ -27,45 +27,58 @@ import Zoom from './pages/Zoom';
 import Footer from './components/Footer';
 
 
+
 function App() {
   let p ="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis soluta eum corporis, voluptatibus esse consectetur molestiae provident at inventore, odit accusantium ea nihil reprehenderit fugit tempora quia expedita omnis delectus non! Laborum aliquid dolorum necessitatibus eligendi libero repudiandae? Consequuntur esse totam eos sint. Dolores, earum, cumque doloribus voluptate nobis tempore, ipsam fugiat qui tenetur culpa quaerat reiciendis quasi laboriosam amet error assumenda praesentium eum vel? Officia commodi sunt nobis voluptas tenetur placeat in inventore quasi magnam aperiam, cupiditate, quibusdam a consectetur explicabo rem hic cumque possimus doloribus facere nihil porro? Eaque sint ad culpa, perspiciatis recusandae beatae odit laudantium impedit nesciunt, perferendis quam facilis minus voluptate ut animi sequi magnam praesentium ipsum numquam expedita. Doloremque asperiores nostrum harum eaque illum itaque alias repellat dicta beatae recusandae, ab praesentium molestiae consectetur. Necessitatibus, enim praesentium dolorem neque et vel aliquam ab doloribus vero saepe ipsa autem ut quo, impedit numquam id natus eligendi nam aperiam consequatur ratione provident, eum architecto culpa! Ipsam, sequi culpa beatae provident esse modi facere, repudiandae aliquid ipsa eaque, ullam ut. At quos delectus sapiente aperiam culpa, similique, alias magni maxime blanditiis eius harum adipisci vel eos? Porro hic ad dicta odit, nihil voluptas atque ex quis facere!"
   const [articles, setArticles] = useState([
-      { id: uuidv4(), quantite : 1 , liens : article1,  statut: "New", ancienPrix: "", toggle: true, prixNew : 100,  nom: 'maillot cameroun', prix: 100 },
-      { id: uuidv4(), quantite : 1 , liens : article2,  statut: "", ancienPrix: "", toggle: null,    prixNew : 170,  nom: "maillot france", prix: 170 },
-      { id: uuidv4(), quantite : 1 , liens : article3,  statut: "", ancienPrix: "", toggle: null,    prixNew : 185,  nom: "maillot england", prix: 185 },
-      { id: uuidv4(), quantite : 1 , liens : article4,  statut: "", ancienPrix: "", toggle: null,    prixNew : 115,  nom: "maillot miami", prix: 115 },
-      { id: uuidv4(), quantite : 1 , liens : article5,  statut: "Sale", ancienPrix: 170,           prixNew : 145,  toggle:  false, nom: "maillot argentine", prix: 145 },
-      { id: uuidv4(), quantite : 1 , liens : article6,  statut: "New", ancienPrix: "", toggle: true, prixNew : 90,  nom: "maillot senegal", prix: 90 },
-      { id: uuidv4(), quantite : 1 , liens : article7,  statut: "New", ancienPrix: "", toggle: true, prixNew : 160,   nom: "maillot angleterre", prix: 160 },
-      { id: uuidv4(), quantite : 1 , liens : article8,  statut: "", ancienPrix: "", toggle: null,    prixNew : 145,  nom: "maillot belgique", prix: 145 },
-      { id: uuidv4(), quantite : 1 , liens : article9,  statut: "", ancienPrix: "", toggle: null,    prixNew : 170,   nom: "maillot madrid", prix: 170 },
+      { id: uuidv4(), quantite : 1, categorie: "afrique", liens : article1,  statut: "New", ancienPrix: "", toggle: true, prixNew : 100,  nom: 'maillot cameroun', prix: 100 },
+      { id: uuidv4(), quantite : 1 ,categorie: "europe", liens : article2,  statut: "", ancienPrix: "", toggle: null,    prixNew : 170,  nom: "maillot france", prix: 170 },
+      { id: uuidv4(), quantite : 1 ,categorie: "europe", liens : article3,  statut: "", ancienPrix: "", toggle: null,    prixNew : 185,  nom: "maillot england", prix: 185 },
+      { id: uuidv4(), quantite : 1 ,categorie: "amerique-nord", liens : article4,  statut: "", ancienPrix: "", toggle: null,    prixNew : 115,  nom: "maillot miami", prix: 115 },
+      { id: uuidv4(), quantite : 1 ,categorie: "amerique-sud", liens : article5,  statut: "Sale", ancienPrix: 170,           prixNew : 145,  toggle:  false, nom: "maillot argentine", prix: 145 },
+      { id: uuidv4(), quantite : 1 ,categorie: "afrique", liens : article6,  statut: "New", ancienPrix: "", toggle: true, prixNew : 90,  nom: "maillot senegal", prix: 90 },
+      { id: uuidv4(), quantite : 1 ,categorie: "europe", liens : article7,  statut: "New", ancienPrix: "", toggle: true, prixNew : 160,   nom: "maillot angleterre", prix: 160 },
+      { id: uuidv4(), quantite : 1 ,categorie: "europe", liens : article8,  statut: "", ancienPrix: "", toggle: null,    prixNew : 145,  nom: "maillot belgique", prix: 145 },
+      { id: uuidv4(), quantite : 1 ,categorie: "europe", liens : article9,  statut: "", ancienPrix: "", toggle: null,    prixNew : 170,   nom: "maillot madrid", prix: 170 },
   
   ]);
   const [filterTableau, setFilterTableau] = useState([
-    { id: uuidv4(), liens : article1,  statut: "New", ancienPrix: "", toggle: true, nom: 'maillot cameroun', prix: 75 },
-    { id: uuidv4(), liens : article2,  statut: "", ancienPrix: "", toggle: null, nom: "maillot france", prix: 170 },
-    { id: uuidv4(), liens : article3,  statut: "", ancienPrix: "", toggle: null, nom: "mailllot england", prix: 185 },
-    { id: uuidv4(), liens : article4,  statut: "", ancienPrix: "", toggle: null, nom: "maillot miami", prix: 115 },
-    { id: uuidv4(), liens : article5,  statut: "Sale", ancienPrix: 170, toggle: false, nom: "maillot argentine", prix: 145 },
-    { id: uuidv4(), liens : article6,  statut: "New", ancienPrix: "", toggle: true, nom: "maillot senegal", prix: 90 },
-    { id: uuidv4(), liens : article7,  statut: "New", ancienPrix: "", toggle: true, nom: "maillot angleterre", prix: 160 },
-    { id: uuidv4(), liens : article8,  statut: "", ancienPrix: "", toggle: null, nom: "maillot belgique", prix: 145 },
-    { id: uuidv4(), liens : article9,  statut: "", ancienPrix: "", toggle: null, nom: "maillot madrid", prix: 170 },
+    { id: uuidv4(), liens : article1,categorie: "afrique",  statut: "New", ancienPrix: "", toggle: true, nom: 'maillot cameroun', prix: 75 },
+    { id: uuidv4(), liens : article2,categorie: "europe",  statut: "", ancienPrix: "", toggle: null, nom: "maillot france", prix: 170 },
+    { id: uuidv4(), liens : article3,categorie: "europe",  statut: "", ancienPrix: "", toggle: null, nom: "mailllot england", prix: 185 },
+    { id: uuidv4(), liens : article4,categorie: "amerique-nord",  statut: "", ancienPrix: "", toggle: null, nom: "maillot miami", prix: 115 },
+    { id: uuidv4(), liens : article5,categorie: "amerique-sud",  statut: "Sale", ancienPrix: 170, toggle: false, nom: "maillot argentine", prix: 145 },
+    { id: uuidv4(), liens : article6,categorie: "afrique",  statut: "New", ancienPrix: "", toggle: true, nom: "maillot senegal", prix: 90 },
+    { id: uuidv4(), liens : article7,categorie: "europe",  statut: "New", ancienPrix: "", toggle: true, nom: "maillot angleterre", prix: 160 },
+    { id: uuidv4(), liens : article8,categorie: "europe",  statut: "", ancienPrix: "", toggle: null, nom: "maillot belgique", prix: 145 },
+    { id: uuidv4(), liens : article9,categorie: "europe",  statut: "", ancienPrix: "", toggle: null, nom: "maillot madrid", prix: 170 },
   
   ]);
   const [nouveauArticles, setNouveauArticles] = useState([
-    { id: uuidv4(), liens: article1, statut: "New", ancienPrix: "", toggle: true, nom: 'maillot cameroun', prix: 75 },
-    { id: uuidv4(), liens: article2, statut: "", ancienPrix: "", toggle: null, nom: "maillot france", prix: 170},
-    { id: uuidv4(), liens: article3, statut: "", ancienPrix: "", toggle: null, nom: "maillot england", prix: 185 },
-    { id: uuidv4(), liens: article4, statut: "", ancienPrix: "", toggle: null, nom: "maillot miami", prix: 115 },
-    { id: uuidv4(), liens: article5, statut: "Sale", ancienPrix: 170, toggle: false, nom: "maillot argentine", prix: 145 },
-    { id: uuidv4(), liens: article6, statut: "New", ancienPrix: "", toggle: true, nom: "maillot senegal", prix: 90 },
-    { id: uuidv4(), liens: article7, statut: "New", ancienPrix: "", toggle: true, nom: "maillot angleterre", prix: 160 },
-    { id: uuidv4(), liens: article8, statut: "", ancienPrix: "", toggle: null, nom: "maillot belgique", prix: 145 },
-    { id: uuidv4(), liens: article9, statut: "", ancienPrix: "", toggle: null, nom: "maillot madrid", prix: 170 },
+    { id: uuidv4(), liens: article1,categorie: "afrique", statut: "New", ancienPrix: "", toggle: true, nom: 'maillot cameroun', prix: 75 },
+    { id: uuidv4(), liens: article2,categorie: "europe", statut: "", ancienPrix: "", toggle: null, nom: "maillot france", prix: 170},
+    { id: uuidv4(), liens: article3,categorie: "europe", statut: "", ancienPrix: "", toggle: null, nom: "maillot england", prix: 185 },
+    { id: uuidv4(), liens: article4,categorie: "amerique-nord", statut: "", ancienPrix: "", toggle: null, nom: "maillot miami", prix: 115 },
+    { id: uuidv4(), liens: article5,categorie: "amerique-sud", statut: "Sale", ancienPrix: 170, toggle: false, nom: "maillot argentine", prix: 145 },
+    { id: uuidv4(), liens: article6,categorie: "afrique", statut: "New", ancienPrix: "", toggle: true, nom: "maillot senegal", prix: 90 },
+    { id: uuidv4(), liens: article7,categorie: "europe", statut: "New", ancienPrix: "", toggle: true, nom: "maillot angleterre", prix: 160 },
+    { id: uuidv4(), liens: article8,categorie: "europe", statut: "", ancienPrix: "", toggle: null, nom: "maillot belgique", prix: 145 },
+    { id: uuidv4(), liens: article9,categorie: "europe", statut: "", ancienPrix: "", toggle: null, nom: "maillot madrid", prix: 170 },
   
   ]);
-  const [articlesChoix, setarticlesChoix] = useState([]);
+
+    const [articlesChoix, setarticlesChoix] = useState([]);
+    const solde = []
+    articles.map(el=>{
+      if(el.statut=="Sale") { 
+
+      solde.push(el)
+
+        }
+    });
+    
+  const [articlesSolde, setArticlesSolde] = useState(solde.length);
+  console.log(articlesSolde.length)
   const [articlesFav, setarticlesFav] = useState([]);
   const [toggleLike, settoggleLike] = useState(false)
   const [tableauZoom, setTableauZoom] = useState([])
@@ -107,6 +120,26 @@ function App() {
       return (
       (el.id !== id.target.value)
       )})
+    // const tableauLike = articlesFav.filter(el=>{
+    //     return (
+    //       el.id !== id.target.value
+    //     )})
+      articles.map(el=>{
+        if(el.id === id.target.value){ 
+        let newPrix= prix
+        newPrix -=el.prix
+        if(newPrix<1){
+          newPrix = 0
+        }
+        setprix(newPrix)  
+      }                           
+      })
+      setarticlesChoix(tableauFilter)
+      // setarticlesFav(tableauLike)
+      console.log(articlesFav)
+  
+  }
+  const supprimeLike =id =>{
     const tableauLike = articlesFav.filter(el=>{
         return (
           el.id !== id.target.value
@@ -121,11 +154,11 @@ function App() {
         setprix(newPrix)  
       }                           
       })
-      setarticlesChoix(tableauFilter)
       setarticlesFav(tableauLike)
       console.log(articlesFav)
   
   }
+
   const [input, setInput] = useState();
   
   const inputValue = (e) => {
@@ -205,6 +238,18 @@ function App() {
     setArticles(test4)
     console.log(articles)
   }
+
+  const afrique = e=>{
+    e.preventDefault()
+    const test6 = nouveauArticles.filter(el=>{
+      return(
+        el.categorie==="afrique"
+      )
+    })
+    setArticles(test6)
+  }
+
+
   
   
   
@@ -213,7 +258,7 @@ function App() {
       <BrowserRouter>
       <Routes> 
         <Route path='/' exact element = {<Home 
-        tableau = {articles} filter= {filter}  func ={addCard} click={supprime} like = {like} likelen = {articlesFav.length} panierlen={articlesChoix.length} zoom={zoom}
+        tableau = {articles} filter= {filter}  func ={addCard} click={supprime} clickLike={supprimeLike} like = {like} likelen = {articlesFav.length} panierlen={articlesChoix.length} zoom={zoom}
         old = {old} sale = {sale} nouveau = {nouveau} bestSeller={bestSeller}
         />} />
         <Route path="*" exact element ={<Notfound/>}/>
