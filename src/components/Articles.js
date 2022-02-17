@@ -7,6 +7,7 @@ import Panier from '../pages/Panier';
 import aboutImg from '../assets/images/about.jpg'
 import { NavLink } from 'react-router-dom';
 
+
 // import article1 from "./assets/images/PRODUCT/etoo.jpg"
 // import article2 from "./assets/images/PRODUCT/mbappe.jpg"
 // import article3 from "./assets/images/PRODUCT/sancho.jpg"
@@ -16,6 +17,8 @@ import { NavLink } from 'react-router-dom';
 // import article7 from "./assets/images/PRODUCT/jadon.jpg"
 // import article8 from "./assets/images/PRODUCT/hazard.jpg"
 // import article9 from "./assets/images/PRODUCT/benzema.jpg"
+
+
 
 
 function Articles(props) {
@@ -46,23 +49,23 @@ function Articles(props) {
     const changeLike = e => {
         props.like(e);
     };
-    const imgEnvoie = id => {
+    const imgEnvoie = id=> {
         props.zoom(id)
     }
 
     const afrique= id =>{
         props.afrique(id)
     }
-    const ameriqueSud = e =>{
-        props.ameriqueSud(e)
+    const ameriqueSud = id =>{
+        props.ameriqueSud(id)
     }
 
-    const ameriqueNord=e=>{
-        props.ameriqueNord(e)
+    const ameriqueNord=id=>{
+        props.ameriqueNord(id)
     }
 
-    const Europe =e=>{
-        props.Europe(e)
+    const europe =id=>{
+        props.europe(id)
     }
 
     
@@ -87,9 +90,9 @@ function Articles(props) {
                 <div className="listeProduct">
                     <ul class="list-group">
                         <li class="list-group-item"><a className='nav-link' onClick={e=>{afrique(e)}} href="/">Afrique</a></li>
-                        <li class="list-group-item"><a href="/">Amerique-sud</a></li>
-                        <li class="list-group-item"><a href="/">AMerique-nord</a></li>
-                        <li class="list-group-item"><a href="/">Europe</a></li>
+                        <li class="list-group-item"><a className='nav-link' onClick={e=>{ameriqueSud(e)}} href="/">Amerique-sud</a></li>
+                        <li class="list-group-item"><a className='nav-link' onClick={e=>{ameriqueNord(e)}} href="/">Amerique-nord</a></li>
+                        <li class="list-group-item"><a onClick={e=>{europe(e)}} href="/">Europe</a></li>
 
                     </ul>
                     <h4>{filter}</h4>
@@ -107,7 +110,7 @@ function Articles(props) {
                 <div className='row'>
                     {props.articles.map(el => {
                         return (
-                            <div className="col-xs-12 col-lg-4 map ">
+                            <div className="col-xs-12 col-lg-4 map mx-3 ">
                                 <div className='position-relative card'>
                                     <img src={el.liens} alt="" />
                                     <span className={el.toggle ? "new" : el.toggle == null ? "" : "sale"}>

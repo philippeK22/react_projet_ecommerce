@@ -24,6 +24,11 @@ const Services = (props) => {
                 solde = {props.solde}
                 zoom={props.zoom}
                 afrique={props.afrique}
+                ameriqueSud={props.ameriqueSud}
+                ameriqueNord={props.ameriqueNord}
+                europe={props.europe}
+                
+                
 
                  />
 

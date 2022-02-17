@@ -12,6 +12,7 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Like from './pages/Like';
 import Panier from './pages/Panier';
+import Articles from './components/Articles';
 import { useState } from 'react';
 import article1 from "./assets/images/PRODUCT/etoo.jpg"
 import article2 from "./assets/images/PRODUCT/mbappe.jpg"
@@ -109,7 +110,8 @@ function App() {
       newPrix +=el.prix
       setarticlesChoix(newArray)
       setprix(newPrix)  
-    }                           
+    }    
+                         
     })
     
   
@@ -243,10 +245,40 @@ function App() {
     e.preventDefault()
     const test6 = nouveauArticles.filter(el=>{
       return(
-        el.categorie==="afrique"
+        el.categorie=="afrique"
       )
     })
     setArticles(test6)
+  }
+
+  const ameriqueSud = e=>{
+    e.preventDefault()
+    const test7 = nouveauArticles.filter(el=>{
+      return(
+        el.categorie=="amerique-sud"
+      )
+    })
+    setArticles(test7)
+  }
+
+  const ameriqueNord = e=>{
+    e.preventDefault()
+    const test9 = nouveauArticles.filter(el=>{
+      return(
+        el.categorie=="amerique-nord"
+      )
+    })
+    setArticles(test9)
+  }
+
+  const europe = e=>{
+    e.preventDefault()
+    const test8 = nouveauArticles.filter(el=>{
+      return(
+        el.categorie=="europe"
+      )
+    })
+    setArticles(test8)
   }
 
 
@@ -259,19 +291,19 @@ function App() {
       <Routes> 
         <Route path='/' exact element = {<Home 
         tableau = {articles} filter= {filter}  func ={addCard} click={supprime} clickLike={supprimeLike} like = {like} likelen = {articlesFav.length} panierlen={articlesChoix.length} zoom={zoom}
-        old = {old} sale = {sale} nouveau = {nouveau} bestSeller={bestSeller}
+        old = {old} sale = {sale} nouveau = {nouveau} bestSeller={bestSeller} 
         />} />
         <Route path="*" exact element ={<Notfound/>}/>
         <Route path="/About" exact element ={<About/>}/>
         <Route path ="/services" exact element = { 
-          < Services articles={articles} click={addCard} submit ={submit} inputValue = {inputValue} like ={like} 
+          < Services articles={articles} click={addCard} submit ={submit} inputValue = {inputValue} like ={like} afrique={afrique} ameriqueSud ={ameriqueSud} ameriqueNord={ameriqueNord} europe={europe} zoom={zoom} 
             />}   />
-        <Route path ="/contact" exact element = {<Contact />} />
+        <Route path ="/contact" exact element = {<Contact  />} />
         <Route path ="/zoom" exact element = {<Zoom 
         tableau ={tableauZoom}
         />} />
         <Route path ="/panier" exact element = 
-        {<Panier articles = {articlesChoix}   click = {supprime} prix = {prix} />} />
+        {<Panier articles = {articlesChoix}  click = {supprime} prix = {prix} />} />
         <Route path ="/coeur" exact element = {<Like articles = {articlesFav} click = {supprime} />} />
       </Routes>
     

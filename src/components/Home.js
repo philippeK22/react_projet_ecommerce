@@ -15,6 +15,7 @@ const Home = (props) => {
             test ="salut"
             likelen={props.likelen}
             panierlen={props.panierlen}
+            supprime={props.clickLike}
              />
              
             <Cards 
