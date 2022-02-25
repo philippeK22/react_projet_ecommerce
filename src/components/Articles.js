@@ -92,7 +92,7 @@ function Articles(props) {
                         <li class="list-group-item"><a className='nav-link' onClick={e=>{afrique(e)}} href="/">Afrique</a></li>
                         <li class="list-group-item"><a className='nav-link' onClick={e=>{ameriqueSud(e)}} href="/">Amerique-sud</a></li>
                         <li class="list-group-item"><a className='nav-link' onClick={e=>{ameriqueNord(e)}} href="/">Amerique-nord</a></li>
-                        <li class="list-group-item"><a onClick={e=>{europe(e)}} href="/">Europe</a></li>
+                        <li class="list-group-item"><a className='nav-link' onClick={e=>{europe(e)}} href="/">Europe</a></li>
 
                     </ul>
                     <h4>{filter}</h4>

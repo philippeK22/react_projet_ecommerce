@@ -56,7 +56,7 @@ function Panier(props) {
         let prixTot = prixTotal;
 
         const test = quantite.map(el => {
-            if (el.id == id.target.value && el.quantite >= 2) {
+            if (el.id == id.target.value && el.quantite >= 1) {
                 let prixTotal = props.prix;
                 el.quantite -= 1;
                 el.prix = el.prixNew * el.quantite;
